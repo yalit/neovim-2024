@@ -5,4 +5,27 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "<C-k>", ":LazyGit<CR>", opts)
+-- LazyGit
+keymap.set("n", "<C-k>", ":LazyGit<Return>", opts)
+
+-- Close buffer
+keymap.set("n", "<C-w>", ":bd<Return>")
+
+-- Close all buffers
+keymap.set("n", "<C-q>", ":qa<Return>")
+
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G", opts)
+
+-- Buffer/Tab movement
+keymap.set("n", "<Tab>", ":BufferLineCycleNext<return>", opts)
+keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<Return>", opts)
+
+-- NeoTree
+keymap.set("n", "<C-b>", ":Neotree toggle<Return>", opts)
+
+-- Handle ToggleTerm
+keymap.set("n", "<C-S-h>", ":ToggleTerm direction=horizontal<Return>", opts)
+keymap.set("t", "<C-S-h>", "<C-\\><C-n>:ToggleTerm direction=horizontal<Return>", opts)
+keymap.set("n", "<C-S-v>", ":ToggleTerm direction=vertical<Return>", opts)
+keymap.set("t", "<C-S-v>", "<C-\\><C-n>:ToggleTerm direction=vertical<Return>", opts)

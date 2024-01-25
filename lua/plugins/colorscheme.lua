@@ -1,6 +1,6 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "EdenEast/nightfox.nvim",
     lazy = true,
     priority = 1000,
     opts = function() end,
@@ -8,7 +8,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "nordfox",
     },
   },
 }

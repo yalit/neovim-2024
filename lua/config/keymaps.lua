@@ -9,7 +9,7 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<C-k>", ":LazyGit<Return>", opts)
 
 -- Close buffer
-keymap.set("n", "<C-w>", ":bd<Return>")
+keymap.set("n", "<C-x>", ":bd<Return>")
 
 -- Close all buffers
 keymap.set("n", "<C-q>", ":qa<Return>")
@@ -29,3 +29,24 @@ keymap.set("n", "<C-S-h>", ":ToggleTerm direction=horizontal<Return>", opts)
 keymap.set("t", "<C-S-h>", "<C-\\><C-n>:ToggleTerm direction=horizontal<Return>", opts)
 keymap.set("n", "<C-S-v>", ":ToggleTerm direction=vertical<Return>", opts)
 keymap.set("t", "<C-S-v>", "<C-\\><C-n>:ToggleTerm direction=vertical<Return>", opts)
+
+-- telescope
+keymap.set("n", "<C-r>", ":lua require('telescope.builtin').lsp_references()<Return>", opts)
+keymap.set("n", "<C-d>", ":lua require('telescope.builtin').lsp_definitions()<Return>", opts)
+-- telescope grep string under cursor
+keymap.set(
+  "n",
+  "<C-f>",
+  ":lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<Return>",
+  opts
+)
+keymap.set(
+  "n",
+  "<leader>fs",
+  ":lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<Return>",
+  opts
+)
+-- help
+keymap.set("n", "<leader>fh", ":Telescope help_tags<Return>", opts)
+keymap.set("n", "<leader>fo", ":Telescope commands<Return>", opts)
+keymap.set("n", "<leader>fk", ":Telescope keymaps<Return>", opts)

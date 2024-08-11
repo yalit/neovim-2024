@@ -72,7 +72,7 @@ return {
       local buf = vim.lsp.buf
       local keymap = vim.keymap
       keymap.set("n", "<leader>ck", buf.signature_help, { desc = "Signature Help" })
-      keymap.set("n", "<leader>cd", buf.type_definition, { noremap = true, desc = "Type definition" })
+      keymap.set("n", "<leader>ct", buf.type_definition, { noremap = true, desc = "Type definition" })
       keymap.set("n", "<leader>cr", buf.rename, { desc = "Rename" })
       keymap.set("n", "<leader>cf", buf.references, { desc = "Find references" })
       keymap.set({ "n", "v" }, "<leader>ca", buf.code_action, { desc = "Code actions" })

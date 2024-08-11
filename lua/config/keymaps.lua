@@ -9,21 +9,17 @@ key.set("n", "<C-s>", ":w<Return>")
 key.set("i", "<C-s>", "<Esc>:w<Return>")
 
 -- Exit all
-key.set("n", "<C-q>", "<Esc>:qa!<Return>", opts)
+key.set("n", "<C-S-q>", "<Esc>:qa!<Return>", opts)
+-- Exit current tab
+key.set("n", "<C-q>", ":q<Return>")
 
--- Selet all
+-- Select all
 key.set("n", "<C-a>", "gg<S-v>G")
 key.set("i", "<C-a>", "<Esc>gg<S-v>G")
 
 -- Text editing
 key.set("v", "<C-A-Down>", ":m '>+1<CR>gv=gv")
 key.set("v", "<C-A-Up>", ":m '<-2<CR>gv=gv")
-
--- Tabs
-key.set("n", "te", ":tabedit<Return>", opts)
-key.set("n", "<Tab>", ":tabnext<Return>", opts)
-key.set("n", "<S-Tab>", ":tabprev<Return>", opts)
-key.set("n", "<C-x>", ":tabclose<Return>", opts)
 
 -- Windows
 -- Split

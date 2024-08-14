@@ -21,7 +21,6 @@ require("lazy").setup({
       colorscheme = "tokyonight",
     } },
     -- import/override with your plugins
-    { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "plugins" },
   },

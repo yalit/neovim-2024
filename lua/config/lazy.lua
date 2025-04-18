@@ -22,6 +22,7 @@ require("lazy").setup({
     } },
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
+    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     { import = "plugins" },
   },
   defaults = {

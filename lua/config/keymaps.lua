@@ -21,6 +21,9 @@ key.set("i", "<C-a>", "<Esc>gg<S-v>G")
 key.set("v", "<C-A-Down>", ":m '>+1<CR>gv=gv")
 key.set("v", "<C-A-Up>", ":m '<-2<CR>gv=gv")
 
+-- Delete single character without copying into register
+key.set("n", "x", '"_x', opts)
+
 -- Windows
 -- Split
 key.set("n", "ss", ":split<Return>", opts)

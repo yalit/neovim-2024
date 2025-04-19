@@ -14,7 +14,6 @@ return {
           "cssls",
           "html",
           "jsonls",
-          "tsserver",
           "phpactor",
           "pyright",
           "tailwindcss",
